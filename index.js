@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const SVG = require('./lib/svg')
+const SVG = require('./lib/svg');
 
 const promptUser = async() => {
   const answers = await inquirer.prompt([
@@ -40,12 +40,12 @@ const promptUser = async() => {
 
 (async () => {
   const userInput = await promptUser();
-  const svgGenertor = new SVGJ(userInput);
+  const svgGenertor = new SVG(userInput);
   const svgContent = svgGenertor.generateSVG();
 
   fs.writeFileSync('logo.svg', svgContent);
   console.log('Generated logo.svg')
 
-})
+})();
 
 
