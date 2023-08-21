@@ -22,9 +22,8 @@
   },
   "homepage": "https://github.com/Bazrahimi/logo#readme",
   "dependencies": {
-    "inquirer": "^8.2.4",
-    "svg": "^0.1.0",
-    "svgson": "^5.3.1"
+    "inquirer": "^8.2.4"
+
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
