@@ -23,9 +23,9 @@
   "homepage": "https://github.com/Bazrahimi/logo#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
-
   },
   "devDependencies": {
+    "jest": "^29.6.2",
     "nodemon": "^3.0.1"
   }
 }
