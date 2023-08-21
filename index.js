@@ -1,7 +1,9 @@
+//Import the required Modules
 const inquirer = require('inquirer');
 const fs = require('fs');
 const SVG = require('./lib/svg');
 
+//function that prompt the user for input 
 const promptUser = async() => {
   const answers = await inquirer.prompt([
     {
@@ -9,6 +11,7 @@ const promptUser = async() => {
       name: 'text',
       message: 'Enter your Logo-text. (should exceed three characters.',
       validate: (input) => {
+        //Validation that text shouldnt be more than three characters
         if (input.length > 3) {
           return 'Please enter not more than three chracters'
         }
@@ -34,17 +37,22 @@ const promptUser = async() => {
       message: 'Enter the shape color (keyword or hex):',
     },
   ]);
-
+  //returing the user's answer
   return answers;
 };
 
+//immediately Invoked Function Epxression to execute the code
 (async () => {
+  //get the user Input
   const userInput = await promptUser();
+  //Create SVG generator initiation
   const svgGenertor = new SVG(userInput);
+  //generate SVG contennt
   const svgContent = svgGenertor.generateSVG();
 
-  fs.writeFileSync('logo.svg', svgContent);
-  console.log('Generated logo.svg')
+  //Write the generated SVG contenet to a file
+  fs.writeFileSync('./dist/logo.svg', svgContent);
+  console.log('Generated logo.svg in ./dist/directory')
 
 })();
 
