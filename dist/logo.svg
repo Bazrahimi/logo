@@ -1,6 +1,6 @@
 
       <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="150,18 244,182 56,182" fill="GREEN" />  // Use render() method here
-          <text x="150" y="105" font-family="Arial" font-size="24" fill="WHITE" text-anchor="middle">BAZ</text>
+          <circle cx="150" cy="100" r="30" fill="green" />
+          <text x="150" y="105" font-family="Arial" font-size="24" fill="#FFFFFF" text-anchor="middle">BAZ</text>
       </svg>
     
